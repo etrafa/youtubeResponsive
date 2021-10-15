@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 8% auto;
+  grid-template-areas: "header header header";
+  height: 100vh;
+  grid-gap: 0.2em;
+}
+
+.head__section {
+  grid-area: header;
+}
+
+.mainContent__section {
+  display: grid;
+  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+}
+
+/***Head Section Starts***/
+.material-icons {
+  color: #606060;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+}
+
+.header-left img {
+  width: 100px;
+  margin-left: 1.7rem;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+}
+
+.header-search input {
+  width: 700px;
+  height: 2.5rem;
+}
+
+.header-search input::placeholder {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  opacity: 0.6;
+}
+
+.header-search i {
+  width: 40px;
+  height: 2.1rem;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 2rem;
+}
+
+.header-icons img {
+  border-radius: 50%;
+  width: 15%;
+}
+
+/***Head Section Ends***/
+
+/***Side Bar Starts***/
+.sidebar__icons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  margin-left: 0.6rem;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sidebar__icon:hover {
+  background-color: #f2f2f2;
+}
+
+.sidebar__icon {
+  padding: 15px;
+}
+
+.sidebar__icon span {
+  margin-left: 0.4rem;
+  opacity: 0.7;
+}
+
+hr {
+  width: 100%;
+}
+
+.home__main__icon {
+  background-color: #e5e5e5;
+}
+
+/***Side Bar Ends***/
+
+/***Main Section Starts***/
+
+.mainContent__section {
+  display: grid;
+  grid-template-columns: repeat(4, 0.25fr);
+  grid-auto-columns: auto;
+}
+
+.video__informations {
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+}
+
+.video__thumnail {
+  width: 320px;
+  height: 180px;
+  cursor: pointer;
+}
+
+.user__profile__picture {
+  border-radius: 50%;
+  width: 12%;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+
+.video__title {
+  display: inline;
+  margin-left: 0.5rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.channel__name,
+.upload__time {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/***Main Section Ends***/
+
+/***Responsive Design Starts***/
+
+@media screen and (max-width: 768px) {
+  .sideBar__section {
+    display: none;
+  }
+  input {
+    display: none;
+  }
+  button {
+    background: none;
+    border: none;
+    width: 40%;
+  }
+  .header-icons > :not(:last-child) {
+    display: none;
+  }
+  .header-icons > :last-child {
+    width: 30%;
+    margin-left: 50px;
+  }
+
+  .mainContent__section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .header-left i {
+    display: none;
+  }
+  .head__section {
+    align-items: center;
+    margin: 0;
+  }
+  .header-left img {
+    margin: 0;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/***Responsive Design Ends***/
